@@ -24,8 +24,9 @@ struct Tab: View {
             
             
             NavigationView{
-                Text("Coffee Screen")
+                CoffeeScreen()
                     .navigationTitle("Coffee")
+                    .navigationBarTitleDisplayMode(.inline)
             }
             .tabItem{
                 Text("Coffee")

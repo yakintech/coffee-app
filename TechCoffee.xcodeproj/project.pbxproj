@@ -16,6 +16,8 @@
 		1D71F974285F54AF009D5B13 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F973285F54AF009D5B13 /* UserDefaultService.swift */; };
 		1D71F976285F5B66009D5B13 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F975285F5B66009D5B13 /* ProfileScreen.swift */; };
 		1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F978285F5CF8009D5B13 /* UserModel.swift */; };
+		1F81688228621D9C00639E6D /* CoffeeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688128621D9C00639E6D /* CoffeeScreen.swift */; };
+		1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		1D71F973285F54AF009D5B13 /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
 		1D71F975285F5B66009D5B13 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		1D71F978285F5CF8009D5B13 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1F81688128621D9C00639E6D /* CoffeeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeScreen.swift; sourceTree = "<group>"; };
+		1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +128,8 @@
 		1D71F96A285F4E6A009D5B13 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				1F81688028621D7D00639E6D /* Coffee */,
 				1D71F971285F4EEC009D5B13 /* Notification */,
-				1D71F96F285F4EE1009D5B13 /* Coffee */,
 				1D71F96E285F4ECD009D5B13 /* Profile */,
 				1D71F96B285F4EAC009D5B13 /* Home */,
 			);
@@ -148,13 +152,6 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		1D71F96F285F4EE1009D5B13 /* Coffee */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coffee;
-			sourceTree = "<group>";
-		};
 		1D71F971285F4EEC009D5B13 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,8 +171,17 @@
 			isa = PBXGroup;
 			children = (
 				1D71F978285F5CF8009D5B13 /* UserModel.swift */,
+				1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		1F81688028621D7D00639E6D /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				1F81688128621D9C00639E6D /* CoffeeScreen.swift */,
+			);
+			path = Coffee;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +257,10 @@
 				1D71F96D285F4EBE009D5B13 /* HomeScreen.swift in Sources */,
 				1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */,
 				1D71F976285F5B66009D5B13 /* ProfileScreen.swift in Sources */,
+				1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */,
 				1D71F969285F4B8C009D5B13 /* Tab.swift in Sources */,
 				1D71F958285F48B4009D5B13 /* ContentView.swift in Sources */,
+				1F81688228621D9C00639E6D /* CoffeeScreen.swift in Sources */,
 				1D71F974285F54AF009D5B13 /* UserDefaultService.swift in Sources */,
 				1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */,
 			);
