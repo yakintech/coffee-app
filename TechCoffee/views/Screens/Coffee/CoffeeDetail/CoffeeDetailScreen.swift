@@ -27,7 +27,7 @@ struct CoffeeDetailScreen: View {
 
                 Divider()
 
-                Text("About \(coffees.coffeeName)")
+                Text("Region: \(coffees.region)")
                     .font(.title2)
                 Text(coffees.description)
             }

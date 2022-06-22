@@ -14,6 +14,7 @@ struct CoffeeListItemModel: Hashable,Codable, Identifiable  {
     let id: Int
     let coffeeName: String
     let description: String
+    let region: String
     private var imageName: String
     var image: Image {
         Image(imageName)
