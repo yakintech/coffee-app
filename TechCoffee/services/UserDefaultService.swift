@@ -4,8 +4,6 @@ import Foundation
 
 class UserDefaultService{
     
-    
-    
     func setUserModel(userModel: UserModel){
         
         if let encoded = try? JSONEncoder().encode(userModel){

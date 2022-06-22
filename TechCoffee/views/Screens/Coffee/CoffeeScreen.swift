@@ -9,19 +9,13 @@ import SwiftUI
 
 struct CoffeeScreen: View {
     
-    
     var body: some View {
-        
         VStack() {
-            
             List {
-                
-                ForEach(CoffeeList.coffees , id: \.self) { coffee in
-                    
-                    NavigationLink(destination: HomeScreen(), label: {
-                        
-                        CoffeeCell(coffee: coffee)
-                        
+                ForEach(coffees , id: \.self) { coffees in
+                    NavigationLink(destination: CoffeeDetailScreen(coffees: coffees),
+                                   label: {
+                        CoffeeCell(coffees: coffees)
                     })
                 }
             }
@@ -31,19 +25,15 @@ struct CoffeeScreen: View {
 }
 
 struct CoffeeCell: View {
-    
-    var coffee: CoffeeListItemModel
-    
+    var coffees: CoffeeListItemModel
     var body: some View {
-        
         HStack {
-            
-            Image(coffee.imageName)
+            coffees.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)
-            
-            Text(coffee.description)
+    
+            Text(coffees.coffeeName)
                 .fontWeight(.semibold)
                 .font(.body)
                 .foregroundColor(Color.black)
@@ -62,3 +52,4 @@ struct CoffeeScreen_Previews: PreviewProvider {
         CoffeeScreen()
     }
 }
+

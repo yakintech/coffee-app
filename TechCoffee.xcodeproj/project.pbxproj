@@ -20,6 +20,9 @@
 		1F81688228621D9C00639E6D /* CoffeeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688128621D9C00639E6D /* CoffeeScreen.swift */; };
 		1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */; };
 		9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */; };
+		9F1B643D286393F00029D48E /* coffeesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F1B643C286393F00029D48E /* coffeesData.json */; };
+		9F1B6441286394710029D48E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B6440286394710029D48E /* MapView.swift */; };
+		9F1B6443286394BE0029D48E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B6442286394BE0029D48E /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		1F81688128621D9C00639E6D /* CoffeeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeScreen.swift; sourceTree = "<group>"; };
 		1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListItemModel.swift; sourceTree = "<group>"; };
 		9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailScreen.swift; sourceTree = "<group>"; };
+		9F1B643C286393F00029D48E /* coffeesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coffeesData.json; sourceTree = "<group>"; };
+		9F1B6440286394710029D48E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9F1B6442286394BE0029D48E /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 				1D71F965285F4A9D009D5B13 /* env */,
 				1D71F964285F4A91009D5B13 /* network */,
 				1D71F963285F4973009D5B13 /* views */,
+				9F1B643A286393A10029D48E /* resources */,
 				1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */,
 				0DD1855928638ED7001EBB86 /* LaunchScreen.swift */,
 				1D71F957285F48B4009D5B13 /* ContentView.swift */,
@@ -168,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				1D71F973285F54AF009D5B13 /* UserDefaultService.swift */,
+				9F1B6442286394BE0029D48E /* ModelData.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -185,9 +193,26 @@
 			isa = PBXGroup;
 			children = (
 				1F81688128621D9C00639E6D /* CoffeeScreen.swift */,
-				9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */,
+				9F1B643B286393B20029D48E /* CoffeeDetail */,
 			);
 			path = Coffee;
+			sourceTree = "<group>";
+		};
+		9F1B643A286393A10029D48E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F1B643C286393F00029D48E /* coffeesData.json */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		9F1B643B286393B20029D48E /* CoffeeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */,
+				9F1B6440286394710029D48E /* MapView.swift */,
+			);
+			path = CoffeeDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1B643D286393F00029D48E /* coffeesData.json in Resources */,
 				1D71F95D285F48B5009D5B13 /* Preview Assets.xcassets in Resources */,
 				1D71F95A285F48B5009D5B13 /* Assets.xcassets in Resources */,
 			);
@@ -261,7 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D71F96D285F4EBE009D5B13 /* HomeScreen.swift in Sources */,
+				9F1B6441286394710029D48E /* MapView.swift in Sources */,
 				1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */,
+				9F1B6443286394BE0029D48E /* ModelData.swift in Sources */,
 				0DD1855A28638ED7001EBB86 /* LaunchScreen.swift in Sources */,
 				1D71F976285F5B66009D5B13 /* ProfileScreen.swift in Sources */,
 				1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */,
