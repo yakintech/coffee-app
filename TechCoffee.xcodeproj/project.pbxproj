@@ -18,6 +18,7 @@
 		1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F978285F5CF8009D5B13 /* UserModel.swift */; };
 		1F81688228621D9C00639E6D /* CoffeeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688128621D9C00639E6D /* CoffeeScreen.swift */; };
 		1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */; };
+		9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		1D71F978285F5CF8009D5B13 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		1F81688128621D9C00639E6D /* CoffeeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeScreen.swift; sourceTree = "<group>"; };
 		1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListItemModel.swift; sourceTree = "<group>"; };
+		9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				1F81688128621D9C00639E6D /* CoffeeScreen.swift */,
+				9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				1D71F958285F48B4009D5B13 /* ContentView.swift in Sources */,
 				1F81688228621D9C00639E6D /* CoffeeScreen.swift in Sources */,
 				1D71F974285F54AF009D5B13 /* UserDefaultService.swift in Sources */,
+				9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */,
 				1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
