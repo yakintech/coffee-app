@@ -11,7 +11,7 @@ import SwiftUI
 struct TechCoffeeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchSreen()
         }
     }
 }
