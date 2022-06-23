@@ -8,15 +8,10 @@
 import SwiftUI
 struct LoginAndRegisterScreen: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    @State var selectedScreen: String
+    var profileViewModel = ProfileViewModel()
     let screens = ["Login", "Register"]
-    @State var selectedScreen: String = "Login"
-    
-    init(selectedScreen : String){
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(.white)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(.coffee)], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
-    }
+
     var body: some View {
         VStack {
             Picker("Login or Register", selection: $selectedScreen) {
@@ -28,6 +23,9 @@ struct LoginAndRegisterScreen: View {
             .colorMultiply(.white)
             .background(Color.coffee)
             .pickerStyle(SegmentedPickerStyle())
+            .onAppear {
+                profileViewModel.customizePicker()
+            }
             if selectedScreen == "Login" {
                 LoginScreen()
             } else {

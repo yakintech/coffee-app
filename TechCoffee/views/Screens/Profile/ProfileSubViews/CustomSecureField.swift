@@ -16,10 +16,7 @@ struct CustomSecureField: View {
             HStack {
                 SecureField(prompt, text: $text)
                 Spacer()
-                if isUncorrect {
-                    Image(systemName: "xmark.circle")
-                        .foregroundColor(.red)
-                }
+
             }
             .padding(.horizontal)
             

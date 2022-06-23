@@ -45,7 +45,7 @@ struct Tab: View {
             
             
             NavigationView{
-                OnBoardProfileScreen()
+                ProfileScreen()
                 /*ProfileScreen()
                     .navigationTitle("Profile")*/
             }

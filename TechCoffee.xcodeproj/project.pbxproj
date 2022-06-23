@@ -37,7 +37,6 @@
 		D301273D2864135700CEAB25 /* sf-ui-display-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127352864135700CEAB25 /* sf-ui-display-bold.otf */; };
 		D301273E2864135700CEAB25 /* sf-ui-display-heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127362864135700CEAB25 /* sf-ui-display-heavy.otf */; };
 		D301273F2864135700CEAB25 /* sf-ui-display-black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127372864135700CEAB25 /* sf-ui-display-black.otf */; };
-		D3012742286415FF00CEAB25 /* OnBoardProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3012741286415FF00CEAB25 /* OnBoardProfileScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +72,6 @@
 		D30127352864135700CEAB25 /* sf-ui-display-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-bold.otf"; sourceTree = "<group>"; };
 		D30127362864135700CEAB25 /* sf-ui-display-heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-heavy.otf"; sourceTree = "<group>"; };
 		D30127372864135700CEAB25 /* sf-ui-display-black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-black.otf"; sourceTree = "<group>"; };
-		D3012741286415FF00CEAB25 /* OnBoardProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardProfileScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +205,6 @@
 				153382AA2863ADC800CACE3C /* LoginScreen.swift */,
 				153382B22863ADC800CACE3C /* RegisterScreen.swift */,
 				153382AB2863ADC800CACE3C /* ProfileSubViews */,
-				D3012741286415FF00CEAB25 /* OnBoardProfileScreen.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -360,7 +357,6 @@
 				153382B82863ADC800CACE3C /* LoginAndRegisterScreen.swift in Sources */,
 				1D71F96D285F4EBE009D5B13 /* HomeScreen.swift in Sources */,
 				9F1B6441286394710029D48E /* MapView.swift in Sources */,
-				D3012742286415FF00CEAB25 /* OnBoardProfileScreen.swift in Sources */,
 				1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */,
 				9F1B6443286394BE0029D48E /* ModelData.swift in Sources */,
 				153382BA2863ADC800CACE3C /* ProfileViewModel.swift in Sources */,

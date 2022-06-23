@@ -9,44 +9,56 @@ import SwiftUI
 
 struct ProfileScreen: View {
     
-    @State var name : String = ""
+    private let images = ["CoffeeTimeCar","CoffeeTimeCar"]
     
-    @State var userModel : UserModel = UserModel();
+    let userDefaultService = UserDefaultService()
     
     var body: some View {
-        
-        VStack{
-            
-            TextField("Name", text: $userModel.name)
-                .padding()
-            
-            TextField("Surname", text: $userModel.surname)
-                .padding()
-            
-            
-            TextField("EMail", text: $userModel.email)
-                .padding()
-            
-            
-            Button("Save to User Defaults"){
-                
-                let userDefaultService = UserDefaultService()
-                userDefaultService.setUserModel(userModel: userModel)
-                
+        VStack(spacing: 0){
+            TabView {
+                ForEach(images, id: \.self) { item in
+                    Image(item)
+                        .scaledToFit()
+                }
             }
+            .aspectRatio(1,contentMode: ContentMode.fit)
+            .tabViewStyle(PageTabViewStyle())
+            .frame(maxWidth: .infinity)
+            Rectangle().frame(width:0,height: 30)
+            Text("Get the best coffee \nin town!")
+                .font(.custom("sf-ui-display-semibold", size:34 ))
+                .font(.largeTitle)
+                .multilineTextAlignment(TextAlignment.center)
+                .frame(maxWidth: .infinity)
+            Rectangle().frame(width:0,height: 30)
+            VStack{
+                NavigationLink{
+                    LoginAndRegisterScreen(selectedScreen: "Register")
+                } label: {
+                    Text("Register")
+                        .font(.custom("sf-ui-display-semibold",size: 18))
+                        .foregroundColor(Color.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color(red: 185 / 255, green: 128 / 255, blue: 104 / 255))
+                        .cornerRadius(30)
+                }
+                NavigationLink{
+                    LoginAndRegisterScreen(selectedScreen: "Login")
+                } label: {
+                    Text("Log In")
+                        .font(.custom("sf-ui-display-semibold",size: 18))
+                        .foregroundColor(Color(red: 185 / 255, green: 128 / 255, blue: 104 / 255))
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .overlay(RoundedRectangle(cornerRadius: 30)
+                            .stroke(Color(red: 185 / 255, green: 128 / 255, blue: 104 / 255), lineWidth: 5)
+                        ).cornerRadius(30)
+                }
+            }.padding(30)
             
-            
-//            TextField("Name", text: $name)
-//                .padding()
-//
-//            Button("Set User Name"){
-//
-//                let userDefaultService = UserDefaultService()
-//
-//                userDefaultService.setUserName(name: name)
-//            }
-//
-        }
+            Spacer()
+        }.frame(alignment: Alignment.top)
     }
 }
 

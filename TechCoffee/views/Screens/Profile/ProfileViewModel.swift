@@ -13,6 +13,13 @@ extension Color {
 }
 
 class ProfileViewModel {
+    
+    func customizePicker() {
+       UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(.white)
+       UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(.coffee)], for: .selected)
+       UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+    }
+    
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
