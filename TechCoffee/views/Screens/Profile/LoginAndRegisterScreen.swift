@@ -12,7 +12,7 @@ struct LoginAndRegisterScreen: View {
     let screens = ["Login", "Register"]
     @State var selectedScreen: String = "Login"
     
-    init() {
+    init(selectedScreen : String){
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(.white)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(.coffee)], for: .selected)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
@@ -47,6 +47,6 @@ struct LoginAndRegisterScreen: View {
 
 struct Login_RegisterScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginAndRegisterScreen()
+        LoginAndRegisterScreen(selectedScreen: "Login")
     }
 }

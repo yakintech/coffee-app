@@ -45,8 +45,9 @@ struct Tab: View {
             
             
             NavigationView{
-                ProfileScreen()
-                    .navigationTitle("Profile")
+                OnBoardProfileScreen()
+                /*ProfileScreen()
+                    .navigationTitle("Profile")*/
             }
             .tabItem{
                 Text("Profile")
@@ -57,4 +58,9 @@ struct Tab: View {
     }
 }
 
+struct Tab_Previews: PreviewProvider {
+    static var previews: some View {
+        Tab()
+    }
+}
 

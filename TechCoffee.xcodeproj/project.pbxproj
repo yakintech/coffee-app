@@ -29,6 +29,15 @@
 		9F1B643D286393F00029D48E /* coffeesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F1B643C286393F00029D48E /* coffeesData.json */; };
 		9F1B6441286394710029D48E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B6440286394710029D48E /* MapView.swift */; };
 		9F1B6443286394BE0029D48E /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1B6442286394BE0029D48E /* ModelData.swift */; };
+		D30127382864135700CEAB25 /* sf-ui-display-semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127302864135700CEAB25 /* sf-ui-display-semibold.otf */; };
+		D30127392864135700CEAB25 /* sf-ui-display-ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127312864135700CEAB25 /* sf-ui-display-ultralight.otf */; };
+		D301273A2864135700CEAB25 /* sf-ui-display-thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127322864135700CEAB25 /* sf-ui-display-thin.otf */; };
+		D301273B2864135700CEAB25 /* sf-ui-display-light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127332864135700CEAB25 /* sf-ui-display-light.otf */; };
+		D301273C2864135700CEAB25 /* sf-ui-display-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127342864135700CEAB25 /* sf-ui-display-medium.otf */; };
+		D301273D2864135700CEAB25 /* sf-ui-display-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127352864135700CEAB25 /* sf-ui-display-bold.otf */; };
+		D301273E2864135700CEAB25 /* sf-ui-display-heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127362864135700CEAB25 /* sf-ui-display-heavy.otf */; };
+		D301273F2864135700CEAB25 /* sf-ui-display-black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127372864135700CEAB25 /* sf-ui-display-black.otf */; };
+		D3012742286415FF00CEAB25 /* OnBoardProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3012741286415FF00CEAB25 /* OnBoardProfileScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +64,16 @@
 		9F1B643C286393F00029D48E /* coffeesData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coffeesData.json; sourceTree = "<group>"; };
 		9F1B6440286394710029D48E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		9F1B6442286394BE0029D48E /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		D301272E2863ED0100CEAB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D30127302864135700CEAB25 /* sf-ui-display-semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-semibold.otf"; sourceTree = "<group>"; };
+		D30127312864135700CEAB25 /* sf-ui-display-ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-ultralight.otf"; sourceTree = "<group>"; };
+		D30127322864135700CEAB25 /* sf-ui-display-thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-thin.otf"; sourceTree = "<group>"; };
+		D30127332864135700CEAB25 /* sf-ui-display-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-light.otf"; sourceTree = "<group>"; };
+		D30127342864135700CEAB25 /* sf-ui-display-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-medium.otf"; sourceTree = "<group>"; };
+		D30127352864135700CEAB25 /* sf-ui-display-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-bold.otf"; sourceTree = "<group>"; };
+		D30127362864135700CEAB25 /* sf-ui-display-heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-heavy.otf"; sourceTree = "<group>"; };
+		D30127372864135700CEAB25 /* sf-ui-display-black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-black.otf"; sourceTree = "<group>"; };
+		D3012741286415FF00CEAB25 /* OnBoardProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardProfileScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +115,8 @@
 		1D71F954285F48B4009D5B13 /* TechCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				D301272F2864131E00CEAB25 /* Fonts */,
+				D301272E2863ED0100CEAB25 /* Info.plist */,
 				1D71F977285F5CE8009D5B13 /* models */,
 				1D71F972285F5375009D5B13 /* services */,
 				1D71F966285F4AA9009D5B13 /* extensions */,
@@ -186,6 +207,7 @@
 				153382AA2863ADC800CACE3C /* LoginScreen.swift */,
 				153382B22863ADC800CACE3C /* RegisterScreen.swift */,
 				153382AB2863ADC800CACE3C /* ProfileSubViews */,
+				D3012741286415FF00CEAB25 /* OnBoardProfileScreen.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -239,6 +261,21 @@
 				9F1B6440286394710029D48E /* MapView.swift */,
 			);
 			path = CoffeeDetail;
+			sourceTree = "<group>";
+		};
+		D301272F2864131E00CEAB25 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D30127372864135700CEAB25 /* sf-ui-display-black.otf */,
+				D30127352864135700CEAB25 /* sf-ui-display-bold.otf */,
+				D30127362864135700CEAB25 /* sf-ui-display-heavy.otf */,
+				D30127332864135700CEAB25 /* sf-ui-display-light.otf */,
+				D30127342864135700CEAB25 /* sf-ui-display-medium.otf */,
+				D30127302864135700CEAB25 /* sf-ui-display-semibold.otf */,
+				D30127322864135700CEAB25 /* sf-ui-display-thin.otf */,
+				D30127312864135700CEAB25 /* sf-ui-display-ultralight.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +337,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F1B643D286393F00029D48E /* coffeesData.json in Resources */,
+				D301273C2864135700CEAB25 /* sf-ui-display-medium.otf in Resources */,
+				D301273E2864135700CEAB25 /* sf-ui-display-heavy.otf in Resources */,
+				D301273F2864135700CEAB25 /* sf-ui-display-black.otf in Resources */,
+				D301273A2864135700CEAB25 /* sf-ui-display-thin.otf in Resources */,
+				D301273B2864135700CEAB25 /* sf-ui-display-light.otf in Resources */,
+				D30127382864135700CEAB25 /* sf-ui-display-semibold.otf in Resources */,
+				D301273D2864135700CEAB25 /* sf-ui-display-bold.otf in Resources */,
 				1D71F95D285F48B5009D5B13 /* Preview Assets.xcassets in Resources */,
+				D30127392864135700CEAB25 /* sf-ui-display-ultralight.otf in Resources */,
 				1D71F95A285F48B5009D5B13 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +360,7 @@
 				153382B82863ADC800CACE3C /* LoginAndRegisterScreen.swift in Sources */,
 				1D71F96D285F4EBE009D5B13 /* HomeScreen.swift in Sources */,
 				9F1B6441286394710029D48E /* MapView.swift in Sources */,
+				D3012742286415FF00CEAB25 /* OnBoardProfileScreen.swift in Sources */,
 				1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */,
 				9F1B6443286394BE0029D48E /* ModelData.swift in Sources */,
 				153382BA2863ADC800CACE3C /* ProfileViewModel.swift in Sources */,
@@ -464,6 +510,7 @@
 				DEVELOPMENT_TEAM = 5WJ6D6989G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TechCoffee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,6 +540,7 @@
 				DEVELOPMENT_TEAM = 5WJ6D6989G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TechCoffee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
