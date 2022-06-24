@@ -9,32 +9,47 @@ import SwiftUI
 
 struct ProfileScreen: View {
     
-    private let images = ["CoffeeTimeCar","CoffeeTimeCar"]
+    private let images = ["login-screen-img1","login-screen-img2"]
     
-    let userDefaultService = UserDefaultService()
+    let userDefaultService = UserDefaultService();
+    
+    
+    init(){
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.init(red: 185 / 255, green: 128 / 255, blue: 104 / 255, alpha: 1);
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2);
+        //userDefaultService.getUserModel() == nil ? nil : NavigationLink{};
+    }
+    
     
     var body: some View {
         VStack(spacing: 0){
-            TabView {
-                ForEach(images, id: \.self) { item in
-                    Image(item)
-                        .scaledToFit()
+            ZStack{
+                    Image("login-screen-background")
+                        .resizable()
+                        //.frame(width:geo.size.width)
+                        .aspectRatio(1,contentMode: ContentMode.fit)
+                    TabView {
+                        ForEach(images, id: \.self) { item in
+                                Image(item)
+                                    .resizable()
+                                    .padding(.all,30)
+                        }
+                    }
+                    .aspectRatio(1,contentMode: ContentMode.fit)
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                 }
-            }
-            .aspectRatio(1,contentMode: ContentMode.fit)
-            .tabViewStyle(PageTabViewStyle())
-            .frame(maxWidth: .infinity)
-            Rectangle().frame(width:0,height: 30)
-            Text("Get the best coffee \nin town!")
-                .font(.custom("sf-ui-display-semibold", size:34 ))
+            Spacer()
+            //Rectangle().frame(width:0,height: 30)
+            Text("Get the best coffee \nin city!")
+                .foregroundColor(Color(red: 185 / 255, green: 128 / 255, blue: 104 / 255))
+                .font(Font.custom("sf-ui-display-semibold", size:30 ))
                 .font(.largeTitle)
                 .multilineTextAlignment(TextAlignment.center)
                 .frame(maxWidth: .infinity)
-            Rectangle().frame(width:0,height: 30)
+            Spacer()
+            //Rectangle().frame(width:0,height: 30)
             VStack{
-                NavigationLink{
-                    LoginAndRegisterScreen(selectedScreen: "Register")
-                } label: {
+                NavigationLink{LoginAndRegisterScreen(selectedScreen: "Register")}label: {
                     Text("Register")
                         .font(.custom("sf-ui-display-semibold",size: 18))
                         .foregroundColor(Color.white)
@@ -45,7 +60,7 @@ struct ProfileScreen: View {
                 }
                 NavigationLink{
                     LoginAndRegisterScreen(selectedScreen: "Login")
-                } label: {
+                }label: {
                     Text("Log In")
                         .font(.custom("sf-ui-display-semibold",size: 18))
                         .foregroundColor(Color(red: 185 / 255, green: 128 / 255, blue: 104 / 255))
@@ -62,8 +77,9 @@ struct ProfileScreen: View {
     }
 }
 
-struct ProfileScreen_Previews: PreviewProvider {
+struct OnBoardProfileScreen_Previews: PreviewProvider {
     static var previews: some View {
         ProfileScreen()
     }
 }
+
