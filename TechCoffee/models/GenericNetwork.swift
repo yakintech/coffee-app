@@ -27,10 +27,12 @@ class GenericNetwork<T> where T : Codable {
     
     func add<PostData : Codable>(url:String, postData: PostData, completionHandler: @escaping (T) -> Void){
         
+        
+        
         AF.request(baseUrl + url, method: .post, parameters: postData, encoder: JSONParameterEncoder.default)
                 .responseDecodable(of: T.self){ response in
                     
-                    
+                    //Data eklendikten sonra eklenen datayı completion handler aracılığıyla iletiyorum
                     completionHandler(response.value!)
             
                 }

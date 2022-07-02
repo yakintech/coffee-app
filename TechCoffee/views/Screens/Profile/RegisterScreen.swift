@@ -43,7 +43,7 @@ struct RegisterScreen: View {
                         registerRequestModel.password = password
                         
                         
-                        genericNetwork.add(url: "register", postData: registerRequestModel){response in
+                        genericNetwork.add(url: "/register", postData: registerRequestModel){response in
                             
                             print("Success", response)
                         }

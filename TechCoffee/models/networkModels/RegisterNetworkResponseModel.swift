@@ -9,6 +9,6 @@ import Foundation
 
 struct RegisterNetworkResponseModel : Codable{
     
-    let message : String = ""
+    var message : String = ""
     
 }
