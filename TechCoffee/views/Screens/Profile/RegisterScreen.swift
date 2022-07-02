@@ -9,12 +9,14 @@ import SwiftUI
 
 struct RegisterScreen: View {
     @State var userModel = UserModel()
+    
     var profileViewModel = ProfileViewModel()
     @State var password: String = ""
     @State var showAlert = false
     var body: some View {
         ScrollView {
             VStack {
+                
                 HStack {
                     Text("Create an Account")
                         .font(.system(size: 28))
@@ -31,7 +33,22 @@ struct RegisterScreen: View {
                 Button {
                     if profileViewModel.isValidPassword(password: password) && profileViewModel.isValidEmail(email: userModel.email) && !profileViewModel.isFieldEmpty(input: userModel.name) && !profileViewModel.isFieldEmpty(input: userModel.surname) {
                         //If All condition satisfies, then register.
-                        print("Registered.")
+                       
+                        let genericNetwork = GenericNetwork<RegisterNetworkResponseModel>()
+                        
+                        var registerRequestModel = RegisterNetworkRequestModel()
+                        registerRequestModel.name = userModel.name
+                        registerRequestModel.surname = userModel.surname
+                        registerRequestModel.email = userModel.email
+                        registerRequestModel.password = password
+                        
+                        
+                        genericNetwork.add(url: "register", postData: registerRequestModel){response in
+                            
+                            print("Success", response)
+                        }
+         
+                        
                     } else {
                         showAlert = true
                     }

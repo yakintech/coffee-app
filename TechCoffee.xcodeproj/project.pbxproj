@@ -23,6 +23,11 @@
 		1D71F974285F54AF009D5B13 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F973285F54AF009D5B13 /* UserDefaultService.swift */; };
 		1D71F976285F5B66009D5B13 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F975285F5B66009D5B13 /* ProfileScreen.swift */; };
 		1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F978285F5CF8009D5B13 /* UserModel.swift */; };
+		1DC2170928707929000F79B3 /* GenericNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC2170828707929000F79B3 /* GenericNetwork.swift */; };
+		1DC2170C28707953000F79B3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC2170B28707953000F79B3 /* Alamofire */; };
+		1DC2170F28707A07000F79B3 /* CoffeeNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC2170E28707A07000F79B3 /* CoffeeNetworkModel.swift */; };
+		1DC21711287081E7000F79B3 /* RegisterNetworkResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC21710287081E7000F79B3 /* RegisterNetworkResponseModel.swift */; };
+		1DC2171328708303000F79B3 /* RegisterNetworkRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC2171228708303000F79B3 /* RegisterNetworkRequestModel.swift */; };
 		1F81688228621D9C00639E6D /* CoffeeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688128621D9C00639E6D /* CoffeeScreen.swift */; };
 		1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */; };
 		9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */; };
@@ -57,6 +62,10 @@
 		1D71F973285F54AF009D5B13 /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
 		1D71F975285F5B66009D5B13 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		1D71F978285F5CF8009D5B13 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		1DC2170828707929000F79B3 /* GenericNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GenericNetwork.swift; path = TechCoffee/models/GenericNetwork.swift; sourceTree = SOURCE_ROOT; };
+		1DC2170E28707A07000F79B3 /* CoffeeNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeNetworkModel.swift; sourceTree = "<group>"; };
+		1DC21710287081E7000F79B3 /* RegisterNetworkResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNetworkResponseModel.swift; sourceTree = "<group>"; };
+		1DC2171228708303000F79B3 /* RegisterNetworkRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNetworkRequestModel.swift; sourceTree = "<group>"; };
 		1F81688128621D9C00639E6D /* CoffeeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeScreen.swift; sourceTree = "<group>"; };
 		1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListItemModel.swift; sourceTree = "<group>"; };
 		9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailScreen.swift; sourceTree = "<group>"; };
@@ -79,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC2170C28707953000F79B3 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +161,7 @@
 		1D71F964285F4A91009D5B13 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				1DC2170828707929000F79B3 /* GenericNetwork.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -228,10 +239,21 @@
 		1D71F977285F5CE8009D5B13 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1DC2170D287079C6000F79B3 /* networkModels */,
 				1D71F978285F5CF8009D5B13 /* UserModel.swift */,
 				1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		1DC2170D287079C6000F79B3 /* networkModels */ = {
+			isa = PBXGroup;
+			children = (
+				1DC2170E28707A07000F79B3 /* CoffeeNetworkModel.swift */,
+				1DC21710287081E7000F79B3 /* RegisterNetworkResponseModel.swift */,
+				1DC2171228708303000F79B3 /* RegisterNetworkRequestModel.swift */,
+			);
+			path = networkModels;
 			sourceTree = "<group>";
 		};
 		1F81688028621D7D00639E6D /* Coffee */ = {
@@ -291,6 +313,9 @@
 			dependencies = (
 			);
 			name = TechCoffee;
+			packageProductDependencies = (
+				1DC2170B28707953000F79B3 /* Alamofire */,
+			);
 			productName = TechCoffee;
 			productReference = 1D71F952285F48B4009D5B13 /* TechCoffee.app */;
 			productType = "com.apple.product-type.application";
@@ -319,6 +344,9 @@
 				Base,
 			);
 			mainGroup = 1D71F949285F48B4009D5B13;
+			packageReferences = (
+				1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1D71F953285F48B4009D5B13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -357,10 +385,13 @@
 				153382B82863ADC800CACE3C /* LoginAndRegisterScreen.swift in Sources */,
 				1D71F96D285F4EBE009D5B13 /* HomeScreen.swift in Sources */,
 				9F1B6441286394710029D48E /* MapView.swift in Sources */,
+				1DC2171328708303000F79B3 /* RegisterNetworkRequestModel.swift in Sources */,
 				1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */,
 				9F1B6443286394BE0029D48E /* ModelData.swift in Sources */,
 				153382BA2863ADC800CACE3C /* ProfileViewModel.swift in Sources */,
+				1DC2170928707929000F79B3 /* GenericNetwork.swift in Sources */,
 				0DD1855A28638ED7001EBB86 /* LaunchScreen.swift in Sources */,
+				1DC2170F28707A07000F79B3 /* CoffeeNetworkModel.swift in Sources */,
 				1D71F976285F5B66009D5B13 /* ProfileScreen.swift in Sources */,
 				1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */,
 				153382B62863ADC800CACE3C /* CustomTextField.swift in Sources */,
@@ -373,6 +404,7 @@
 				9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */,
 				1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */,
 				153382B42863ADC800CACE3C /* LoginScreen.swift in Sources */,
+				1DC21711287081E7000F79B3 /* RegisterNetworkResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DC2170B28707953000F79B3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D71F94A285F48B4009D5B13 /* Project object */;
 }
