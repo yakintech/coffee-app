@@ -10,13 +10,13 @@ import Foundation
 
 struct CoffeeNetworkModel : Codable{
     
-    let id : String = ""
-    let coffeeName: String = ""
-    let description: String = ""
-    let imageName: String = ""
-    let detailImageName: String = ""
-    let region: String = ""
-    let latitude: Double = 0.0
-    let longitude : Double = 0.0
+    var id : String = ""
+    var coffeeName: String = ""
+    var description: String = ""
+    var imageName: String = ""
+    var detailImageName: String = ""
+    var region: String = ""
+    var latitude: Double = 0.0
+    var longitude : Double = 0.0
     
 }

@@ -10,7 +10,10 @@ import CodeVerifier
 
 struct ConfirmationScreen: View {
     @Environment(\.presentationMode) var presentationMode
-
+    
+    @State var confirmCode : String = ""
+    var email : String
+    
     let trueCode = "1234" // This code must be fetched from api.
     
     var body: some View {
@@ -25,15 +28,47 @@ struct ConfirmationScreen: View {
                 .font(.title2)
                 .foregroundColor(.secondary)
             ZStack {
-                SecureCodeVerifier(code: trueCode)
-                            .onCodeFilled { isCodeCorrect in
-                                if isCodeCorrect {
-                                    print("Confirmed")
-                                    self.presentationMode.wrappedValue.dismiss()
-                                } else {
-                                    
-                                }
-                            }
+                //                SecureCodeVerifier(code: trueCode)
+                //                            .onCodeFilled { isCodeCorrect in
+                //
+                //                            }
+                
+                TextField("Confirm Code", text: $confirmCode)
+                    .padding()
+                
+                Button("Confirm"){
+                    
+                    var confirmRequestModel = ConfirmCodeRequestModel()
+                    confirmRequestModel.email = email
+                    confirmRequestModel.confirmCode = confirmCode
+                    
+                    let genericNetwork = GenericNetwork<ConfirmCodeResponseNetworkModel>()
+                    
+                    genericNetwork.add(url: "/confirm", postData: confirmRequestModel){response in
+                        
+                        if(response.statusCode == 200){
+                            
+                            let data = response.data as! ConfirmCodeResponseNetworkModel
+                            
+                            let loginModel = LoginModel(email: data.email)
+                            
+                            let userDefaultService = UserDefaultService()
+                            userDefaultService.setLogin(loginModel: loginModel)
+                        
+                            self.presentationMode.wrappedValue.dismiss()
+                            
+                        }else if(response.statusCode == 404){
+                            print("Confirm Code Hatalı")
+                        }
+                        else{
+                            print("Sistemde hata meydana geldi!")
+                        }
+                        
+                    }
+                    
+                }
+                
+                
             }
             Button {
                 self.presentationMode.wrappedValue.dismiss()
@@ -52,8 +87,3 @@ struct ConfirmationScreen: View {
     }
 }
 
-struct ConfirmationScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        ConfirmationScreen()
-    }
-}

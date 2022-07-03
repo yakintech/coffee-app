@@ -11,8 +11,8 @@ import Foundation
 struct RegisterNetworkRequestModel : Codable
 {
     
-    var name : String = ""
-    var surname : String = ""
+    var firstName : String = ""
+    var lastName : String = ""
     var email : String = ""
     var password: String = ""
 }

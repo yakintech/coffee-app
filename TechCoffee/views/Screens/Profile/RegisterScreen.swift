@@ -33,21 +33,23 @@ struct RegisterScreen: View {
          
 
                 Button {
+                    
+                    
                     if profileViewModel.isValid(user: userModel) {
                         //If All condition satisfies, then register.
                        
                         let genericNetwork = GenericNetwork<RegisterNetworkResponseModel>()
                         
                         var registerRequestModel = RegisterNetworkRequestModel()
-                        registerRequestModel.name = userModel.name
-                        registerRequestModel.surname = userModel.surname
+                        registerRequestModel.firstName = userModel.name
+                        registerRequestModel.lastName = userModel.surname
                         registerRequestModel.email = userModel.email
                         registerRequestModel.password = userModel.password
                         
                         
                         genericNetwork.add(url: "/register", postData: registerRequestModel){response in
                             
-                            print("Success", response)
+                            
                         }
                         
                         showConfirmationScreen = true
@@ -66,7 +68,7 @@ struct RegisterScreen: View {
                 Spacer()
             }
             .sheet(isPresented: $showConfirmationScreen, content: {
-                ConfirmationScreen()
+                ConfirmationScreen(email: userModel.email)
             })
             .alert("Registiration Fail", isPresented: $showAlert) {
                 //
@@ -77,10 +79,3 @@ struct RegisterScreen: View {
     }
 }
 
-struct RegisterScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            RegisterScreen()
-        }
-    }
-}

@@ -22,13 +22,14 @@ struct CoffeeScreen: View {
             .listStyle(.plain)
         }
         .onAppear(){
-            let genericNetwork = GenericNetwork<CoffeeNetworkModel>()
-            
-            genericNetwork.getAll(url:"/coffees"){data in
-                
-              
-                
-            }
+            print("DATA")
+//            let genericNetwork = GenericNetwork<CoffeeNetworkModel>()
+//
+//            genericNetwork.getAll(url:"/coffees"){data in
+//
+//
+//
+//            }
         }
     }
 }

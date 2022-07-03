@@ -12,28 +12,42 @@ class GenericNetwork<T> where T : Codable {
     
     let baseUrl = "https://seashell-app-woiws.ondigitalocean.app/api"
     
-    func getAll(url:String, completionHandler: @escaping ([T]) -> Void){
+    func getAll(url:String, completionHandler: @escaping (ResponseBaseModel) -> Void){
         
         let request = AF.request(baseUrl + url)
         
         request.responseDecodable(of: [T].self){response in
             
-            completionHandler(response.value!)
+            var responseModel = ResponseBaseModel()
+            responseModel.statusCode = response.response?.statusCode ?? 0
+            responseModel.errorMessage = ""
+            responseModel.data = response.value!
+            
+            
+            completionHandler(responseModel)
             
         }
         
     }
     
-    
-    func add<PostData : Codable>(url:String, postData: PostData, completionHandler: @escaping (T) -> Void){
+    //RequestModel - ResponseModel
+    func add<PostData : Codable>(url:String, postData: PostData, completionHandler: @escaping (ResponseBaseModel) -> Void){
         
         
         
         AF.request(baseUrl + url, method: .post, parameters: postData, encoder: JSONParameterEncoder.default)
                 .responseDecodable(of: T.self){ response in
                     
-                    //Data eklendikten sonra eklenen datayı completion handler aracılığıyla iletiyorum
-                    completionHandler(response.value!)
+                    var responseModel = ResponseBaseModel()
+                    
+                    
+                    responseModel.statusCode = response.response?.statusCode ?? 0
+                    responseModel.errorMessage = ""
+                    responseModel.data = response.value!
+                    
+                    
+                    completionHandler(responseModel)
+                
             
                 }
     }

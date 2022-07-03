@@ -15,7 +15,8 @@
 		153382BA2863ADC800CACE3C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382B12863ADC800CACE3C /* ProfileViewModel.swift */; };
 		153382BB2863ADC800CACE3C /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382B22863ADC800CACE3C /* RegisterScreen.swift */; };
 		159EA2D12871402A0090491D /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EA2D02871402A0090491D /* ConfirmationScreen.swift */; };
-		159EA2D428714C080090491D /* CodeVerifier in Frameworks */ = {isa = PBXBuildFile; productRef = 159EA2D328714C080090491D /* CodeVerifier */; };
+		1D6846212871CEE000051376 /* ResponseBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6846202871CEE000051376 /* ResponseBaseModel.swift */; };
+		1D6846232871D32D00051376 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6846222871D32D00051376 /* LoginModel.swift */; };
 		1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */; };
 		1D71F958285F48B4009D5B13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F957285F48B4009D5B13 /* ContentView.swift */; };
 		1D71F95A285F48B5009D5B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D71F959285F48B5009D5B13 /* Assets.xcassets */; };
@@ -30,6 +31,9 @@
 		1DC2170F28707A07000F79B3 /* CoffeeNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC2170E28707A07000F79B3 /* CoffeeNetworkModel.swift */; };
 		1DC21711287081E7000F79B3 /* RegisterNetworkResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC21710287081E7000F79B3 /* RegisterNetworkResponseModel.swift */; };
 		1DC2171328708303000F79B3 /* RegisterNetworkRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC2171228708303000F79B3 /* RegisterNetworkRequestModel.swift */; };
+		1DC217192871BFA5000F79B3 /* CodeVerifier in Frameworks */ = {isa = PBXBuildFile; productRef = 1DC217182871BFA5000F79B3 /* CodeVerifier */; };
+		1DC2171B2871C320000F79B3 /* ConfirmCodeRequestNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC2171A2871C320000F79B3 /* ConfirmCodeRequestNetworkModel.swift */; };
+		1DC2171F2871C41E000F79B3 /* ConfirmCodeResponseNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC2171E2871C41E000F79B3 /* ConfirmCodeResponseNetworkModel.swift */; };
 		1F81688228621D9C00639E6D /* CoffeeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688128621D9C00639E6D /* CoffeeScreen.swift */; };
 		1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */; };
 		9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */; };
@@ -55,6 +59,8 @@
 		153382B12863ADC800CACE3C /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		153382B22863ADC800CACE3C /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		159EA2D02871402A0090491D /* ConfirmationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationScreen.swift; sourceTree = "<group>"; };
+		1D6846202871CEE000051376 /* ResponseBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBaseModel.swift; sourceTree = "<group>"; };
+		1D6846222871D32D00051376 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		1D71F952285F48B4009D5B13 /* TechCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechCoffeeApp.swift; sourceTree = "<group>"; };
 		1D71F957285F48B4009D5B13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 		1DC2170E28707A07000F79B3 /* CoffeeNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeNetworkModel.swift; sourceTree = "<group>"; };
 		1DC21710287081E7000F79B3 /* RegisterNetworkResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNetworkResponseModel.swift; sourceTree = "<group>"; };
 		1DC2171228708303000F79B3 /* RegisterNetworkRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNetworkRequestModel.swift; sourceTree = "<group>"; };
+		1DC2171A2871C320000F79B3 /* ConfirmCodeRequestNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeRequestNetworkModel.swift; sourceTree = "<group>"; };
+		1DC2171E2871C41E000F79B3 /* ConfirmCodeResponseNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCodeResponseNetworkModel.swift; sourceTree = "<group>"; };
 		1F81688128621D9C00639E6D /* CoffeeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeScreen.swift; sourceTree = "<group>"; };
 		1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListItemModel.swift; sourceTree = "<group>"; };
 		9D4B4D262863740900B881F8 /* CoffeeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDetailScreen.swift; sourceTree = "<group>"; };
@@ -92,7 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DC2170C28707953000F79B3 /* Alamofire in Frameworks */,
-				159EA2D428714C080090491D /* CodeVerifier in Frameworks */,
+				1DC217192871BFA5000F79B3 /* CodeVerifier in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +255,7 @@
 				1DC2170D287079C6000F79B3 /* networkModels */,
 				1D71F978285F5CF8009D5B13 /* UserModel.swift */,
 				1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */,
+				1D6846222871D32D00051376 /* LoginModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -254,11 +263,30 @@
 		1DC2170D287079C6000F79B3 /* networkModels */ = {
 			isa = PBXGroup;
 			children = (
+				1DC2171D2871C3EA000F79B3 /* response */,
+				1DC2171C2871C3BA000F79B3 /* request */,
 				1DC2170E28707A07000F79B3 /* CoffeeNetworkModel.swift */,
-				1DC21710287081E7000F79B3 /* RegisterNetworkResponseModel.swift */,
-				1DC2171228708303000F79B3 /* RegisterNetworkRequestModel.swift */,
 			);
 			path = networkModels;
+			sourceTree = "<group>";
+		};
+		1DC2171C2871C3BA000F79B3 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				1DC2171A2871C320000F79B3 /* ConfirmCodeRequestNetworkModel.swift */,
+				1DC2171228708303000F79B3 /* RegisterNetworkRequestModel.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		1DC2171D2871C3EA000F79B3 /* response */ = {
+			isa = PBXGroup;
+			children = (
+				1DC21710287081E7000F79B3 /* RegisterNetworkResponseModel.swift */,
+				1DC2171E2871C41E000F79B3 /* ConfirmCodeResponseNetworkModel.swift */,
+				1D6846202871CEE000051376 /* ResponseBaseModel.swift */,
+			);
+			path = response;
 			sourceTree = "<group>";
 		};
 		1F81688028621D7D00639E6D /* Coffee */ = {
@@ -320,7 +348,7 @@
 			name = TechCoffee;
 			packageProductDependencies = (
 				1DC2170B28707953000F79B3 /* Alamofire */,
-				159EA2D328714C080090491D /* CodeVerifier */,
+				1DC217182871BFA5000F79B3 /* CodeVerifier */,
 			);
 			productName = TechCoffee;
 			productReference = 1D71F952285F48B4009D5B13 /* TechCoffee.app */;
@@ -352,7 +380,7 @@
 			mainGroup = 1D71F949285F48B4009D5B13;
 			packageReferences = (
 				1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				159EA2D228714C080090491D /* XCRemoteSwiftPackageReference "CodeVerifier" */,
+				1DC217172871BFA5000F79B3 /* XCRemoteSwiftPackageReference "CodeVerifier" */,
 			);
 			productRefGroup = 1D71F953285F48B4009D5B13 /* Products */;
 			projectDirPath = "";
@@ -390,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				153382B82863ADC800CACE3C /* LoginAndRegisterScreen.swift in Sources */,
+				1D6846232871D32D00051376 /* LoginModel.swift in Sources */,
 				1D71F96D285F4EBE009D5B13 /* HomeScreen.swift in Sources */,
 				9F1B6441286394710029D48E /* MapView.swift in Sources */,
 				1DC2171328708303000F79B3 /* RegisterNetworkRequestModel.swift in Sources */,
@@ -398,6 +427,7 @@
 				153382BA2863ADC800CACE3C /* ProfileViewModel.swift in Sources */,
 				1DC2170928707929000F79B3 /* GenericNetwork.swift in Sources */,
 				0DD1855A28638ED7001EBB86 /* LaunchScreen.swift in Sources */,
+				1DC2171F2871C41E000F79B3 /* ConfirmCodeResponseNetworkModel.swift in Sources */,
 				1DC2170F28707A07000F79B3 /* CoffeeNetworkModel.swift in Sources */,
 				1D71F976285F5B66009D5B13 /* ProfileScreen.swift in Sources */,
 				1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */,
@@ -407,7 +437,9 @@
 				1D71F958285F48B4009D5B13 /* ContentView.swift in Sources */,
 				1F81688228621D9C00639E6D /* CoffeeScreen.swift in Sources */,
 				1D71F974285F54AF009D5B13 /* UserDefaultService.swift in Sources */,
+				1D6846212871CEE000051376 /* ResponseBaseModel.swift in Sources */,
 				153382BB2863ADC800CACE3C /* RegisterScreen.swift in Sources */,
+				1DC2171B2871C320000F79B3 /* ConfirmCodeRequestNetworkModel.swift in Sources */,
 				9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */,
 				159EA2D12871402A0090491D /* ConfirmationScreen.swift in Sources */,
 				1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */,
@@ -619,14 +651,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		159EA2D228714C080090491D /* XCRemoteSwiftPackageReference "CodeVerifier" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/posix88/CodeVerifier";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
-			};
-		};
 		1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -635,18 +659,26 @@
 				kind = branch;
 			};
 		};
+		1DC217172871BFA5000F79B3 /* XCRemoteSwiftPackageReference "CodeVerifier" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/posix88/CodeVerifier";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		159EA2D328714C080090491D /* CodeVerifier */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 159EA2D228714C080090491D /* XCRemoteSwiftPackageReference "CodeVerifier" */;
-			productName = CodeVerifier;
-		};
 		1DC2170B28707953000F79B3 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		1DC217182871BFA5000F79B3 /* CodeVerifier */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DC217172871BFA5000F79B3 /* XCRemoteSwiftPackageReference "CodeVerifier" */;
+			productName = CodeVerifier;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
