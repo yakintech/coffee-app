@@ -9,28 +9,33 @@ import SwiftUI
 
 struct Tab: View {
     
-    @State var onBoard : Bool = false
-    @State var selectedTab = 1
+    //    @State var onBoard : Bool = false
+    //    @State var selectedTab = 1
+
+    init() {
+        UITabBar.appearance().barTintColor = UIColor(Color.coffee) // custom color.
+       }
     
     
     var body: some View {
+    
         
         VStack{
-            if onBoard && selectedTab == 4{
-                HStack(alignment: VerticalAlignment.top){
-                    Button(action: {
-                        withAnimation{
-                            self.selectedTab = 1;
-                            self.onBoard = false;
-                        }
-                    }){
-                        Image(systemName: "xmark").foregroundColor(Color(red: 185 / 255, green: 128 / 255, blue: 104 / 255))
-                    }.padding(.leading, 20)
-                    Spacer()
-                }
-            }
+            //            if onBoard && selectedTab == 4{
+            //                HStack(alignment: VerticalAlignment.top){
+            //                    Button(action: {
+            //                        withAnimation{
+            //                            self.selectedTab = 1;
+            //                            self.onBoard = false;
+            //                        }
+            //                    }){
+            //                        Image(systemName: "xmark").foregroundColor(Color(red: 185 / 255, green: 128 / 255, blue: 104 / 255))
+            //                    }.padding(.leading, 20)
+            //                    Spacer()
+            //                }
+            //            }
             ZStack{
-                TabView(selection: $selectedTab){
+                TabView {
                     
                     NavigationView{
                         HomeScreen()
@@ -39,7 +44,9 @@ struct Tab: View {
                     .tabItem{
                         Text("Home")
                         Image(systemName: "house")
-                    }.tag(1)
+                            
+                    }
+                    .accentColor(.coffee)
                     
                     
                     NavigationView{
@@ -49,8 +56,8 @@ struct Tab: View {
                     }
                     .tabItem{
                         Text("Coffee")
-                        Image(systemName: "home")
-                    }.tag(2)
+                        Image(systemName: "cup.and.saucer")
+                    }
                     
                     
                     NavigationView{
@@ -58,41 +65,39 @@ struct Tab: View {
                             .navigationTitle("Notifications")
                     }
                     .tabItem{
-                        Text("Home")
-                        Image(systemName: "home")
-                    }.tag(3)
-                    
-                    
-                    NavigationView{
-                        //ProfileScreen()
-                        /*ProfileScreen()
-                         .navigationTitle("Profile")*/
+                        Text("Notifications")
+                        Image(systemName: "bell")
                     }
-                    .tabItem(){
-                        Text("Profile")
-                        Image(systemName: "home")
-                    }.tag(4)
                     
                     
-                    
-                }.onChange(of: selectedTab){ newValue in
-                    print("yazdı")
-                    
-                    self.onBoard = true;
-                    
-                }
-                
-                if onBoard && selectedTab == 4{
                     NavigationView{
                         ProfileScreen()
                             .animation(Animation.default)
                             .transition(.move(edge: .bottom))
+                            .navigationBarHidden(true)
+                        
                     }
-                }
+                    .tabItem(){
+                        Text("Profile")
+                        Image(systemName: "person")
+                    }
+                    
+                }.accentColor(.coffee)
+    
+                //                .onChange(of: selectedTab){ newValue in
+                //                    print("yazdı")
+                //
+                //                    self.onBoard = true;
+                //
+                //                }
                 
-                
-                
-                
+                //                if onBoard && selectedTab == 4{
+                //                    NavigationView{
+                //                        ProfileScreen()
+                //                            .animation(Animation.default)
+                //                            .transition(.move(edge: .bottom))
+                //                    }
+                //                }
             }
         }
     }

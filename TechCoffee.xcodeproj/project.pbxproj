@@ -14,6 +14,8 @@
 		153382B82863ADC800CACE3C /* LoginAndRegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382AF2863ADC800CACE3C /* LoginAndRegisterScreen.swift */; };
 		153382BA2863ADC800CACE3C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382B12863ADC800CACE3C /* ProfileViewModel.swift */; };
 		153382BB2863ADC800CACE3C /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382B22863ADC800CACE3C /* RegisterScreen.swift */; };
+		159EA2D12871402A0090491D /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EA2D02871402A0090491D /* ConfirmationScreen.swift */; };
+		159EA2D428714C080090491D /* CodeVerifier in Frameworks */ = {isa = PBXBuildFile; productRef = 159EA2D328714C080090491D /* CodeVerifier */; };
 		1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */; };
 		1D71F958285F48B4009D5B13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F957285F48B4009D5B13 /* ContentView.swift */; };
 		1D71F95A285F48B5009D5B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D71F959285F48B5009D5B13 /* Assets.xcassets */; };
@@ -52,6 +54,7 @@
 		153382AF2863ADC800CACE3C /* LoginAndRegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAndRegisterScreen.swift; sourceTree = "<group>"; };
 		153382B12863ADC800CACE3C /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		153382B22863ADC800CACE3C /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		159EA2D02871402A0090491D /* ConfirmationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationScreen.swift; sourceTree = "<group>"; };
 		1D71F952285F48B4009D5B13 /* TechCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechCoffeeApp.swift; sourceTree = "<group>"; };
 		1D71F957285F48B4009D5B13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DC2170C28707953000F79B3 /* Alamofire in Frameworks */,
+				159EA2D428714C080090491D /* CodeVerifier in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +219,7 @@
 				153382AF2863ADC800CACE3C /* LoginAndRegisterScreen.swift */,
 				153382AA2863ADC800CACE3C /* LoginScreen.swift */,
 				153382B22863ADC800CACE3C /* RegisterScreen.swift */,
+				159EA2D02871402A0090491D /* ConfirmationScreen.swift */,
 				153382AB2863ADC800CACE3C /* ProfileSubViews */,
 			);
 			path = Profile;
@@ -315,6 +320,7 @@
 			name = TechCoffee;
 			packageProductDependencies = (
 				1DC2170B28707953000F79B3 /* Alamofire */,
+				159EA2D328714C080090491D /* CodeVerifier */,
 			);
 			productName = TechCoffee;
 			productReference = 1D71F952285F48B4009D5B13 /* TechCoffee.app */;
@@ -346,6 +352,7 @@
 			mainGroup = 1D71F949285F48B4009D5B13;
 			packageReferences = (
 				1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				159EA2D228714C080090491D /* XCRemoteSwiftPackageReference "CodeVerifier" */,
 			);
 			productRefGroup = 1D71F953285F48B4009D5B13 /* Products */;
 			projectDirPath = "";
@@ -402,6 +409,7 @@
 				1D71F974285F54AF009D5B13 /* UserDefaultService.swift in Sources */,
 				153382BB2863ADC800CACE3C /* RegisterScreen.swift in Sources */,
 				9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */,
+				159EA2D12871402A0090491D /* ConfirmationScreen.swift in Sources */,
 				1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */,
 				153382B42863ADC800CACE3C /* LoginScreen.swift in Sources */,
 				1DC21711287081E7000F79B3 /* RegisterNetworkResponseModel.swift in Sources */,
@@ -611,6 +619,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		159EA2D228714C080090491D /* XCRemoteSwiftPackageReference "CodeVerifier" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/posix88/CodeVerifier";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -622,6 +638,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		159EA2D328714C080090491D /* CodeVerifier */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 159EA2D228714C080090491D /* XCRemoteSwiftPackageReference "CodeVerifier" */;
+			productName = CodeVerifier;
+		};
 		1DC2170B28707953000F79B3 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1DC2170A28707953000F79B3 /* XCRemoteSwiftPackageReference "Alamofire" */;

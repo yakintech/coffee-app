@@ -20,6 +20,14 @@ class ProfileViewModel {
        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
     }
     
+    func isValid(user: UserModel) -> Bool {
+        if isValidPassword(password: user.password) && isValidEmail(email: user.email) && !isFieldEmpty(input: user.name) && !isFieldEmpty(input: user.surname) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func isValidEmail(email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
