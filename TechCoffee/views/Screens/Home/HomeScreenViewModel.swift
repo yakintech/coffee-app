@@ -7,10 +7,21 @@
 
 import Foundation
 
-final class HomeScreenVM {
+final class HomeScreenVManager {
     var postList : [CoffePostModel] = []
     
+    var delegate: PostViewDelegate?
+    
     let postNetworkManager: GenericNetwork<CoffePostModel> = GenericNetwork<CoffePostModel>()
+    
+    
+    static func ft_FetchData(){
+            //some network calls
+//        then.
+        
+//        delegate?.ft_UpdateData(postList)
+        
+    }
     
     
     /*

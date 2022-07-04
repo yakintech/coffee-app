@@ -1,8 +1,7 @@
 //
-//  JobsCart.swift
-//  jobFinder-TechCareer
+//  TechCoffee
 //
-//  Created by Macbook on 17.06.2022.
+//  Created by baskurthalit on 4.07.2022.
 //
 
 import SwiftUI
