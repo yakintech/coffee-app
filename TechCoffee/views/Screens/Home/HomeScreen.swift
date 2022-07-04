@@ -6,34 +6,37 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct HomeScreen: View {
     
-    @State var name = ""
-    @State var userModel : UserModel = UserModel()
+    //    @State var userModel : UserModel = UserModel()
+    @State var CoffePosts: [CoffePostModel] = [CoffePostModel(id: 1, postImageUrl: "Deneme", postedTime: "Deneme", user: UserModel(name: "My name", surname: "My surname", email: "asdasdasd", password: "asdasdasd")),CoffePostModel(id: 1, postImageUrl: "Deneme", postedTime: "Deneme", user: UserModel(name: "My name", surname: "My surname", email: "asdasdasd", password: "asdasdasd")),CoffePostModel(id: 1, postImageUrl: "Deneme", postedTime: "Deneme", user: UserModel(name: "My name", surname: "My surname", email: "asdasdasd", password: "asdasdasd")),CoffePostModel(id: 1, postImageUrl: "Deneme", postedTime: "Deneme", user: UserModel(name: "My name", surname: "My surname", email: "asdasdasd", password: "asdasdasd"))]
     
-    var body: some View {
-        VStack{
-            Text(userModel.name)
-                .padding()
+    var body: some View {        
+        ScrollView{
+            VStack(alignment: .leading){
+                HStack{
+                    UserInfo()
+                        .padding()
+                    Spacer()
             
-            Text(userModel.surname)
-                .padding()
-            
-            Text(userModel.email)
-                .padding()
-            
-//            Text(name)
+                }
+                
+                ForEach(CoffePosts , id: \.self) { coffePost in
+                    PostCell(post: coffePost)
+                        .padding()
+                }
+            }
         }
-        .onAppear(){
-            
-            let userDefaultService = UserDefaultService()
-            name = userDefaultService.getUserName()
-            
-            userModel = userDefaultService.getUserModel()
+        .onAppear {
             
         }
     }
+    init(){
+        
+    }
+    
 }
 
 struct HomeScreen_Previews: PreviewProvider {
@@ -41,3 +44,7 @@ struct HomeScreen_Previews: PreviewProvider {
         HomeScreen()
     }
 }
+
+
+
+

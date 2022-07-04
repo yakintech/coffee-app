@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct UserModel : Codable{
+struct UserModel : Codable, Hashable{
     
     var name : String = ""
     var surname : String = ""

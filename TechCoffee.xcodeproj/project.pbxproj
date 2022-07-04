@@ -19,8 +19,6 @@
 		1D6846232871D32D00051376 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6846222871D32D00051376 /* LoginModel.swift */; };
 		1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */; };
 		1D71F958285F48B4009D5B13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F957285F48B4009D5B13 /* ContentView.swift */; };
-		1D71F95A285F48B5009D5B13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D71F959285F48B5009D5B13 /* Assets.xcassets */; };
-		1D71F95D285F48B5009D5B13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D71F95C285F48B5009D5B13 /* Preview Assets.xcassets */; };
 		1D71F969285F4B8C009D5B13 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F968285F4B8C009D5B13 /* Tab.swift */; };
 		1D71F96D285F4EBE009D5B13 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F96C285F4EBE009D5B13 /* HomeScreen.swift */; };
 		1D71F974285F54AF009D5B13 /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F973285F54AF009D5B13 /* UserDefaultService.swift */; };
@@ -48,6 +46,11 @@
 		D301273D2864135700CEAB25 /* sf-ui-display-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127352864135700CEAB25 /* sf-ui-display-bold.otf */; };
 		D301273E2864135700CEAB25 /* sf-ui-display-heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127362864135700CEAB25 /* sf-ui-display-heavy.otf */; };
 		D301273F2864135700CEAB25 /* sf-ui-display-black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D30127372864135700CEAB25 /* sf-ui-display-black.otf */; };
+		FA05EA622872C3150024F5FA /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05EA612872C3150024F5FA /* PostCell.swift */; };
+		FA05EA652872D6A90024F5FA /* CoffeePostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA05EA642872D6A90024F5FA /* CoffeePostModel.swift */; };
+		FA393B2F2873097C009A5819 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA393B2E2873097C009A5819 /* UserInfo.swift */; };
+		FA393B3128730E4E009A5819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA393B3028730E4E009A5819 /* Assets.xcassets */; };
+		FA393B3328732D4B009A5819 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA393B3228732D4B009A5819 /* HomeScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +67,6 @@
 		1D71F952285F48B4009D5B13 /* TechCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechCoffeeApp.swift; sourceTree = "<group>"; };
 		1D71F957285F48B4009D5B13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		1D71F959285F48B5009D5B13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1D71F95C285F48B5009D5B13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D71F968285F4B8C009D5B13 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		1D71F96C285F4EBE009D5B13 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		1D71F973285F54AF009D5B13 /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
@@ -92,6 +93,11 @@
 		D30127352864135700CEAB25 /* sf-ui-display-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-bold.otf"; sourceTree = "<group>"; };
 		D30127362864135700CEAB25 /* sf-ui-display-heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-heavy.otf"; sourceTree = "<group>"; };
 		D30127372864135700CEAB25 /* sf-ui-display-black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-ui-display-black.otf"; sourceTree = "<group>"; };
+		FA05EA612872C3150024F5FA /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		FA05EA642872D6A90024F5FA /* CoffeePostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePostModel.swift; sourceTree = "<group>"; };
+		FA393B2E2873097C009A5819 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		FA393B3028730E4E009A5819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA393B3228732D4B009A5819 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,18 +153,9 @@
 				1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */,
 				0DD1855928638ED7001EBB86 /* LaunchScreen.swift */,
 				1D71F957285F48B4009D5B13 /* ContentView.swift */,
-				1D71F959285F48B5009D5B13 /* Assets.xcassets */,
-				1D71F95B285F48B5009D5B13 /* Preview Content */,
+				FA393B3028730E4E009A5819 /* Assets.xcassets */,
 			);
 			path = TechCoffee;
-			sourceTree = "<group>";
-		};
-		1D71F95B285F48B5009D5B13 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				1D71F95C285F48B5009D5B13 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		1D71F963285F4973009D5B13 /* views */ = {
@@ -214,7 +211,9 @@
 		1D71F96B285F4EAC009D5B13 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FA05EA632872C31B0024F5FA /* CustomViews */,
 				1D71F96C285F4EBE009D5B13 /* HomeScreen.swift */,
+				FA393B3228732D4B009A5819 /* HomeScreenViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -256,6 +255,7 @@
 				1D71F978285F5CF8009D5B13 /* UserModel.swift */,
 				1F81688328622ABA00639E6D /* CoffeeListItemModel.swift */,
 				1D6846222871D32D00051376 /* LoginModel.swift */,
+				FA05EA642872D6A90024F5FA /* CoffeePostModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -330,6 +330,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		FA05EA632872C31B0024F5FA /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FA05EA612872C3150024F5FA /* PostCell.swift */,
+				FA393B2E2873097C009A5819 /* UserInfo.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,13 +409,12 @@
 				D301273C2864135700CEAB25 /* sf-ui-display-medium.otf in Resources */,
 				D301273E2864135700CEAB25 /* sf-ui-display-heavy.otf in Resources */,
 				D301273F2864135700CEAB25 /* sf-ui-display-black.otf in Resources */,
+				FA393B3128730E4E009A5819 /* Assets.xcassets in Resources */,
 				D301273A2864135700CEAB25 /* sf-ui-display-thin.otf in Resources */,
 				D301273B2864135700CEAB25 /* sf-ui-display-light.otf in Resources */,
 				D30127382864135700CEAB25 /* sf-ui-display-semibold.otf in Resources */,
 				D301273D2864135700CEAB25 /* sf-ui-display-bold.otf in Resources */,
-				1D71F95D285F48B5009D5B13 /* Preview Assets.xcassets in Resources */,
 				D30127392864135700CEAB25 /* sf-ui-display-ultralight.otf in Resources */,
-				1D71F95A285F48B5009D5B13 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,18 +427,22 @@
 			files = (
 				153382B82863ADC800CACE3C /* LoginAndRegisterScreen.swift in Sources */,
 				1D6846232871D32D00051376 /* LoginModel.swift in Sources */,
+				FA05EA622872C3150024F5FA /* PostCell.swift in Sources */,
 				1D71F96D285F4EBE009D5B13 /* HomeScreen.swift in Sources */,
 				9F1B6441286394710029D48E /* MapView.swift in Sources */,
 				1DC2171328708303000F79B3 /* RegisterNetworkRequestModel.swift in Sources */,
 				1D71F979285F5CF8009D5B13 /* UserModel.swift in Sources */,
 				9F1B6443286394BE0029D48E /* ModelData.swift in Sources */,
 				153382BA2863ADC800CACE3C /* ProfileViewModel.swift in Sources */,
+				FA393B3328732D4B009A5819 /* HomeScreenViewModel.swift in Sources */,
 				1DC2170928707929000F79B3 /* GenericNetwork.swift in Sources */,
 				0DD1855A28638ED7001EBB86 /* LaunchScreen.swift in Sources */,
 				1DC2171F2871C41E000F79B3 /* ConfirmCodeResponseNetworkModel.swift in Sources */,
+				FA393B2F2873097C009A5819 /* UserInfo.swift in Sources */,
 				1DC2170F28707A07000F79B3 /* CoffeeNetworkModel.swift in Sources */,
 				1D71F976285F5B66009D5B13 /* ProfileScreen.swift in Sources */,
 				1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */,
+				FA05EA652872D6A90024F5FA /* CoffeePostModel.swift in Sources */,
 				153382B62863ADC800CACE3C /* CustomTextField.swift in Sources */,
 				153382B52863ADC800CACE3C /* CustomSecureField.swift in Sources */,
 				1D71F969285F4B8C009D5B13 /* Tab.swift in Sources */,
@@ -574,7 +586,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TechCoffee/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 5WJ6D6989G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -604,7 +616,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TechCoffee/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 5WJ6D6989G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

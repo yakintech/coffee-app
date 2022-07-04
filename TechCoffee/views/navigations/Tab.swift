@@ -11,43 +11,50 @@ struct Tab: View {
     
     //    @State var onBoard : Bool = false
     //    @State var selectedTab = 1
-
-    init() {
-        UITabBar.appearance().barTintColor = UIColor(Color.coffee) // custom color.
-       }
     
+    init() {
+        UITabBar.appearance().barTintColor = UIColor(Color.white) // custom color.
+        UIToolbar.appearance().barTintColor = .white
+        
+    }
     
     var body: some View {
-    
         
         VStack{
-            //            if onBoard && selectedTab == 4{
-            //                HStack(alignment: VerticalAlignment.top){
-            //                    Button(action: {
-            //                        withAnimation{
-            //                            self.selectedTab = 1;
-            //                            self.onBoard = false;
-            //                        }
-            //                    }){
-            //                        Image(systemName: "xmark").foregroundColor(Color(red: 185 / 255, green: 128 / 255, blue: 104 / 255))
-            //                    }.padding(.leading, 20)
-            //                    Spacer()
-            //                }
-            //            }
             ZStack{
                 TabView {
                     
                     NavigationView{
                         HomeScreen()
                             .navigationTitle("Home")
+                            .navigationViewStyle(.automatic)
+                            .toolbar {
+                                ToolbarItem (placement: .bottomBar){
+                                    HStack{
+                                    Button() {
+                                        
+                                    } label: {
+                                        Image(systemName: "plus.circle")
+                                            .resizable()
+                                            .frame(width: 20, height: 20)
+                                            
+                                    }
+                                        
+                                    .buttonStyle(.borderedProminent)
+                                    .clipShape(Circle())
+                                    .shadow(radius: 12)
+                                    .overlay(Circle().stroke(Color.white, lineWidth: 1))
+                                }
+                                }
+                            
+                            }
+                        
+                        
                     }
                     .tabItem{
                         Text("Home")
                         Image(systemName: "house")
-                            
                     }
-                    .accentColor(.coffee)
-                    
                     
                     NavigationView{
                         CoffeeScreen()
@@ -83,21 +90,7 @@ struct Tab: View {
                     }
                     
                 }.accentColor(.coffee)
-    
-                //                .onChange(of: selectedTab){ newValue in
-                //                    print("yazdı")
-                //
-                //                    self.onBoard = true;
-                //
-                //                }
                 
-                //                if onBoard && selectedTab == 4{
-                //                    NavigationView{
-                //                        ProfileScreen()
-                //                            .animation(Animation.default)
-                //                            .transition(.move(edge: .bottom))
-                //                    }
-                //                }
             }
         }
     }
