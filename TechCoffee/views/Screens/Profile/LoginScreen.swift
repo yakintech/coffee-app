@@ -42,7 +42,10 @@ struct LoginScreen: View {
                     if vm.isValidEmail(email: userModel.email) && vm.isValidPassword(password: password) {
                        UserDefaultService.shared.setUserModel(userModel: userModel)
                         vm.currentUser = userModel
+                        
+                        vm.currentUser?.name = userModel.email.components(separatedBy: "@").first!
                         vm.isUserLoggedOut = false
+                     
 
                     } else {
                         showAlert = true

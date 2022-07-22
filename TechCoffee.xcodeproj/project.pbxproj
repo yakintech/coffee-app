@@ -16,6 +16,7 @@
 		153382BA2863ADC800CACE3C /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382B12863ADC800CACE3C /* ProfileViewModel.swift */; };
 		153382BB2863ADC800CACE3C /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382B22863ADC800CACE3C /* RegisterScreen.swift */; };
 		159EA2D12871402A0090491D /* ConfirmationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EA2D02871402A0090491D /* ConfirmationScreen.swift */; };
+		15E5425C288B273800AC5B35 /* CustomPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E5425B288B273800AC5B35 /* CustomPostCell.swift */; };
 		1D6846212871CEE000051376 /* ResponseBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6846202871CEE000051376 /* ResponseBaseModel.swift */; };
 		1D6846232871D32D00051376 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6846222871D32D00051376 /* LoginModel.swift */; };
 		1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D71F955285F48B4009D5B13 /* TechCoffeeApp.swift */; };
@@ -65,6 +66,7 @@
 		153382B12863ADC800CACE3C /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		153382B22863ADC800CACE3C /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		159EA2D02871402A0090491D /* ConfirmationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationScreen.swift; sourceTree = "<group>"; };
+		15E5425B288B273800AC5B35 /* CustomPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPostCell.swift; sourceTree = "<group>"; };
 		1D6846202871CEE000051376 /* ResponseBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBaseModel.swift; sourceTree = "<group>"; };
 		1D6846222871D32D00051376 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		1D71F952285F48B4009D5B13 /* TechCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 		153382AB2863ADC800CACE3C /* ProfileSubViews */ = {
 			isa = PBXGroup;
 			children = (
+				15E5425B288B273800AC5B35 /* CustomPostCell.swift */,
 				153382AC2863ADC800CACE3C /* CustomSecureField.swift */,
 				153382AD2863ADC800CACE3C /* CustomTextField.swift */,
 			);
@@ -460,6 +463,7 @@
 				153382BB2863ADC800CACE3C /* RegisterScreen.swift in Sources */,
 				1DC2171B2871C320000F79B3 /* ConfirmCodeRequestNetworkModel.swift in Sources */,
 				9D4B4D272863740900B881F8 /* CoffeeDetailScreen.swift in Sources */,
+				15E5425C288B273800AC5B35 /* CustomPostCell.swift in Sources */,
 				159EA2D12871402A0090491D /* ConfirmationScreen.swift in Sources */,
 				1D71F956285F48B4009D5B13 /* TechCoffeeApp.swift in Sources */,
 				153382B42863ADC800CACE3C /* LoginScreen.swift in Sources */,

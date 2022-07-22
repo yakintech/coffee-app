@@ -28,10 +28,9 @@ struct ConfirmationScreen: View {
                 .multilineTextAlignment(.center)
                 .font(.title2)
                 .foregroundColor(.secondary)
-            ZStack {
                 TextField("Confirm Code", text: $confirmCode)
                     .padding()
-                Button("Confirm") {
+                Button {
                     var confirmRequestModel = ConfirmCodeRequestModel()
                     confirmRequestModel.email = email
                     confirmRequestModel.confirmCode = confirmCode
@@ -67,12 +66,16 @@ struct ConfirmationScreen: View {
                             print("Sistemde hata meydana geldi!")
                         }
                     }
-                }.onDisappear {
+                } label: {
+                    Text("Confirm")
+                        .foregroundColor(.coffee)
+                }
+                .onDisappear {
                     if isConfirmed {
                         vm.isUserLoggedOut = false
                     }
                 }
-            }
+            
             Button {
                 self.presentationMode.wrappedValue.dismiss()
             } label: {

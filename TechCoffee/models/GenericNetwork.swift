@@ -27,25 +27,17 @@ class GenericNetwork<T> where T : Codable {
             completionHandler(responseModel)
             
         }
-        
     }
     
     //RequestModel - ResponseModel
     func add<PostData : Codable>(url:String, postData: PostData, completionHandler: @escaping (ResponseBaseModel) -> Void){
-        
-        
-        
         AF.request(baseUrl + url, method: .post, parameters: postData, encoder: JSONParameterEncoder.default)
                 .responseDecodable(of: T.self){ response in
-                    
                     var responseModel = ResponseBaseModel()
-                    
-                    
                     responseModel.statusCode = response.response?.statusCode ?? 0
                     responseModel.errorMessage = ""
                     responseModel.data = response.value ?? ""
                     completionHandler(responseModel)
                 }
     }
-    
 }
