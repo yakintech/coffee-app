@@ -7,9 +7,9 @@
 
 import SwiftUI
 struct LoginAndRegisterScreen: View {
+    @EnvironmentObject var vm : ProfileViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var selectedScreen: String
-    var profileViewModel = ProfileViewModel()
     let screens = ["Login", "Register"]
 
     var body: some View {
@@ -24,14 +24,14 @@ struct LoginAndRegisterScreen: View {
             .background(Color.coffee)
             .pickerStyle(SegmentedPickerStyle())
             .onAppear {
-                profileViewModel.customizePicker()
+                vm.customizePicker()
             }
             if selectedScreen == "Login" {
                 LoginScreen()
             } else {
                 RegisterScreen()
             }
-        }
+        }.environmentObject(vm)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action: {
@@ -40,6 +40,7 @@ struct LoginAndRegisterScreen: View {
             Image(systemName: "chevron.left")
                 .foregroundColor(.white)
         }))
+
     }
 }
 

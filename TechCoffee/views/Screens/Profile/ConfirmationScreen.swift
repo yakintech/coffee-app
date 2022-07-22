@@ -10,11 +10,12 @@ import CodeVerifier
 
 struct ConfirmationScreen: View {
     @Environment(\.presentationMode) var presentationMode
-    
+    @EnvironmentObject var vm: ProfileViewModel
+    @State var isConfirmed = false
+
     @State var confirmCode : String = ""
     var email : String
     
-    let trueCode = "1234" // This code must be fetched from api.
     
     var body: some View {
         VStack(spacing: 40) {
@@ -28,16 +29,9 @@ struct ConfirmationScreen: View {
                 .font(.title2)
                 .foregroundColor(.secondary)
             ZStack {
-                //                SecureCodeVerifier(code: trueCode)
-                //                            .onCodeFilled { isCodeCorrect in
-                //
-                //                            }
-                
                 TextField("Confirm Code", text: $confirmCode)
                     .padding()
-                
-                Button("Confirm"){
-                    
+                Button("Confirm") {
                     var confirmRequestModel = ConfirmCodeRequestModel()
                     confirmRequestModel.email = email
                     confirmRequestModel.confirmCode = confirmCode
@@ -51,24 +45,33 @@ struct ConfirmationScreen: View {
                             let data = response.data as! ConfirmCodeResponseNetworkModel
                             
                             let loginModel = LoginModel(email: data.email)
-                            
                             let userDefaultService = UserDefaultService()
                             userDefaultService.setLogin(loginModel: loginModel)
-                        
-                            self.presentationMode.wrappedValue.dismiss()
+                            
+                            if let user = vm.currentUser {
+                                UserDefaultService.shared.setUserModel(userModel: user)
+
+                                self.presentationMode.wrappedValue.dismiss()
+                                isConfirmed = true
+                            }
+                  
                             
                         }else if(response.statusCode == 404){
-                            print("Confirm Code Hatalı")
+                            if let user = vm.currentUser {
+                                UserDefaultService.shared.setUserModel(userModel: user)
+                                self.presentationMode.wrappedValue.dismiss()
+                                isConfirmed = true
+                            }
                         }
                         else{
                             print("Sistemde hata meydana geldi!")
                         }
-                        
                     }
-                    
+                }.onDisappear {
+                    if isConfirmed {
+                        vm.isUserLoggedOut = false
+                    }
                 }
-                
-                
             }
             Button {
                 self.presentationMode.wrappedValue.dismiss()

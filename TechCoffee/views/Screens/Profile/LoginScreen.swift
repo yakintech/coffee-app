@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct LoginScreen: View {
+    @EnvironmentObject var vm : ProfileViewModel
     @State var userModel = UserModel()
-    var profileViewModel = ProfileViewModel()
     @State var password: String = ""
     @State private var showAlert = false
     var body: some View {
@@ -39,9 +39,11 @@ struct LoginScreen: View {
                 .padding()
                 Spacer().frame(height: 30)
                 Button {
-                    if profileViewModel.isValidEmail(email: userModel.email) && profileViewModel.isValidPassword(password: password) {
-                        //Log in action
-                        print("Logged in")
+                    if vm.isValidEmail(email: userModel.email) && vm.isValidPassword(password: password) {
+                       UserDefaultService.shared.setUserModel(userModel: userModel)
+                        vm.currentUser = userModel
+                        vm.isUserLoggedOut = false
+
                     } else {
                         showAlert = true
                     }

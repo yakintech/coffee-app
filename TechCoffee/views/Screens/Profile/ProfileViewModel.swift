@@ -12,7 +12,15 @@ extension Color {
     static let coffee = Color("coffee")
 }
 
-class ProfileViewModel {
+class ProfileViewModel: ObservableObject {
+    @Published var isUserLoggedOut = true
+    @Published var isConfirmed = false
+    @Published var currentUser: UserModel?
+    
+    init() {
+        self.currentUser = UserDefaultService.shared.getUserModel() ?? nil
+        self.isUserLoggedOut = UserDefaultService.shared.getUserModel() == nil
+    }
     
     func customizePicker() {
        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(.white)

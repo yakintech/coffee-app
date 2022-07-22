@@ -4,7 +4,7 @@ import Foundation
 
 class UserDefaultService{
     
-    
+    static let shared = UserDefaultService()
     
     func setLogin(loginModel: LoginModel){
         
@@ -28,6 +28,7 @@ class UserDefaultService{
         return LoginModel(email: "")
         
     }
+ 
     
     func setUserModel(userModel: UserModel){
         
@@ -37,7 +38,7 @@ class UserDefaultService{
         }
     }
     
-    func getUserModel() -> UserModel{
+    func getUserModel() -> UserModel?{
 
         let defaults = UserDefaults.standard
         if let userModel = defaults.object(forKey: "userModel") as? Data {
@@ -47,11 +48,12 @@ class UserDefaultService{
             }
         }
         
-        return UserModel()
+        return nil
       
     }
-    
-    
+    func deleteUserModel() {
+        UserDefaults.standard.removeObject(forKey: "userModel")
+    }
     func setUserName(name: String){
         
         let defaults = UserDefaults.standard;

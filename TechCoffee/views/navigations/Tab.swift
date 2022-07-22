@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct Tab: View {
+    @StateObject var vm = ProfileViewModel()
     
     //    @State var onBoard : Bool = false
-    //    @State var selectedTab = 1
     
     init() {
         UITabBar.appearance().barTintColor = UIColor(Color.white) // custom color.
@@ -78,10 +78,11 @@ struct Tab: View {
                     
                     
                     NavigationView{
-                        ProfileScreen()
+                        UserProfileScreen()
                             .animation(Animation.default)
                             .transition(.move(edge: .bottom))
                             .navigationBarHidden(true)
+                            .environmentObject(vm)
                         
                     }
                     .tabItem(){

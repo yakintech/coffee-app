@@ -43,12 +43,8 @@ class GenericNetwork<T> where T : Codable {
                     
                     responseModel.statusCode = response.response?.statusCode ?? 0
                     responseModel.errorMessage = ""
-                    responseModel.data = response.value!
-                    
-                    
+                    responseModel.data = response.value ?? ""
                     completionHandler(responseModel)
-                
-            
                 }
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0DD1855A28638ED7001EBB86 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD1855928638ED7001EBB86 /* LaunchScreen.swift */; };
+		152993F728898E4B000170DD /* UserProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152993F628898E4B000170DD /* UserProfileScreen.swift */; };
 		153382B42863ADC800CACE3C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382AA2863ADC800CACE3C /* LoginScreen.swift */; };
 		153382B52863ADC800CACE3C /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382AC2863ADC800CACE3C /* CustomSecureField.swift */; };
 		153382B62863ADC800CACE3C /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153382AD2863ADC800CACE3C /* CustomTextField.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		0DD1855928638ED7001EBB86 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		152993F628898E4B000170DD /* UserProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileScreen.swift; sourceTree = "<group>"; };
 		153382AA2863ADC800CACE3C /* LoginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		153382AC2863ADC800CACE3C /* CustomSecureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		153382AD2863ADC800CACE3C /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				153382AA2863ADC800CACE3C /* LoginScreen.swift */,
 				153382B22863ADC800CACE3C /* RegisterScreen.swift */,
 				159EA2D02871402A0090491D /* ConfirmationScreen.swift */,
+				152993F628898E4B000170DD /* UserProfileScreen.swift */,
 				153382AB2863ADC800CACE3C /* ProfileSubViews */,
 			);
 			path = Profile;
@@ -446,6 +449,7 @@
 				1D71F976285F5B66009D5B13 /* ProfileScreen.swift in Sources */,
 				1F81688428622ABA00639E6D /* CoffeeListItemModel.swift in Sources */,
 				FA05EA652872D6A90024F5FA /* CoffeePostModel.swift in Sources */,
+				152993F728898E4B000170DD /* UserProfileScreen.swift in Sources */,
 				153382B62863ADC800CACE3C /* CustomTextField.swift in Sources */,
 				153382B52863ADC800CACE3C /* CustomSecureField.swift in Sources */,
 				1D71F969285F4B8C009D5B13 /* Tab.swift in Sources */,
