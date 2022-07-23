@@ -37,7 +37,7 @@ struct CoffeeScreen: View {
                model.coffeeName = data.coffeeName
                model.imageName = data.imageName
                
-
+               coffees.append(model)
 
 
             }
