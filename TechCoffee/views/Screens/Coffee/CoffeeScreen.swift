@@ -7,14 +7,18 @@
 
 import SwiftUI
 
+
+
 struct CoffeeScreen: View {
     
+    @State var coffees = [CoffeeListItemModel]()
     var body: some View {
         VStack() {
             List {
                 ForEach(coffees , id: \.self) { coffees in
+                   
                     NavigationLink(destination: CoffeeDetailScreen(coffees: coffees),
-                                   label: {
+                                  label: {
                         CoffeeCell(coffees: coffees)
                     })
                 }
@@ -23,13 +27,20 @@ struct CoffeeScreen: View {
         }
         .onAppear(){
             print("DATA")
-//            let genericNetwork = GenericNetwork<CoffeeNetworkModel>()
-//
-//            genericNetwork.getAll(url:"/coffees"){data in
-//
-//
-//
-//            }
+        let genericNetwork = GenericNetwork<CoffeeNetworkModel>()
+
+           genericNetwork.getAll(url:"/coffees"){ response in
+               
+               let data = response.data as! CoffeeNetworkModel
+               
+               var model = CoffeeListItemModel()
+               model.coffeeName = data.coffeeName
+               model.imageName = data.imageName
+               
+
+
+
+            }
         }
     }
 }
@@ -38,7 +49,7 @@ struct CoffeeCell: View {
     var coffees: CoffeeListItemModel
     var body: some View {
         HStack {
-            coffees.image
+            Image(coffees.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)

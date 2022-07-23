@@ -5,7 +5,7 @@
 //  Created by Melih Gökmen on 22.06.2022.
 //
 
-import Foundation
+/*import Foundation
 
 var coffees: [CoffeeListItemModel] = load("coffeesData.json")
 
@@ -30,3 +30,4 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+*/

@@ -9,33 +9,16 @@ import Foundation
 import SwiftUI
 import CoreLocation
 
-struct CoffeeListItemModel: Hashable,Codable, Identifiable  {
+struct CoffeeListItemModel: Hashable, Codable {
     
-    let id: Int
-    let coffeeName: String
-    let description: String
-    let region: String
-    private var imageName: String
-    var image: Image {
-        Image(imageName)
-    }
-
-    private var detailImageName: String
-    var detailImage: Image {
-        Image(detailImageName)
-    }
-    
-    private var coordinates: Coordinates
-    var locationCoordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(
-            latitude: coordinates.latitude,
-            longitude: coordinates.longitude)
-    }
-
-    struct Coordinates: Hashable, Codable {
-        var latitude: Double
-        var longitude: Double
-    }
+    var id : String = ""
+    var coffeeName: String = ""
+    var description: String = ""
+    var imageName: String = ""
+    var detailImageName: String = ""
+    var region: String = ""
+    var latitude: Double = 0.0
+    var longitude : Double = 0.0
 }
 
 /*
